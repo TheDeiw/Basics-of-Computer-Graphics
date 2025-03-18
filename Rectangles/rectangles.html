@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Координатна система</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	 <div class="controls">
+		<h1>Побудувати прямокутник</h1>
+		<h3>Координати лівого верхнього кута</h3>
+		<label for="x1">X:</label>
+		<input type="number" id="x1" placeholder="Введіть X">
+		<label for="y1">Y:</label>
+		<input type="number" id="y1" placeholder="Введіть Y">
+		<h3>Координати правого нижнього кута</h3>
+		<label for="x2">X:</label>
+		<input type="number" id="x2" placeholder="Введіть X">
+		<label for="y2">Y:</label>
+		<input type="number" id="y2" placeholder="Введіть Y">
+		<button onclick="drawRectangle()">Побудувати прямокутник</button>
+
+		<h3>Наявні прямокутники:</h3>
+    <div class="dataBlock"></div>
+
+    <div class="colorPicker">
+        <label for="color">Колір діагоналі:</label>
+        <input type="color" id="color">
+        <button onclick="drawDiagonal()">Побудувати діагональ</button>
+        <button onclick="drawCircle()">Побудувати зовнішнє коло</button>
+    </div>
+
+    <div class="scaleControls">
+        <h3>Масштаб:</h3>
+        <button onclick="zoomIn()">Збільшити</button>
+        <button onclick="zoomOut()">Зменшити</button>
+        
+        <button onclick="clearCanvas()">Очистити полотно</button>
+    </div>
+  </div>
+    <canvas id="canvas"></canvas>
+    
+    <script src="script.js"></script>
+	 <script src="rectangle_data.js"></script>
+   <script src="../add_back_button.js"></script>
+</body>
+</html>

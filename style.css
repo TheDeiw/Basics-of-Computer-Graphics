@@ -1,0 +1,102 @@
+@property --myColor1 {
+	syntax: '<color>';
+	initial-value: #000;
+	inherits: false;
+ }
+ 
+ @property --myColor2 {
+	syntax: '<color>';
+	initial-value: #1e1e1e;
+	inherits: false;
+ }
+ 
+
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(135deg, var(--myColor1), var(--myColor2)); /* Базовий фон */
+	transition: --myColor1 1s, --myColor2 1s;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	overflow: hidden;
+	z-index: 0;
+}
+
+/* Решта стилів */
+.wrapper {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Стиль для заголовку */
+h1 {
+	margin-bottom: 20px;
+	color: #fff;
+ }
+ 
+ /* Контейнер для посилань */
+ .links-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+ }
+ 
+ /* Загальний стиль для посилань */
+ .link {
+	display: block;
+	width: 300px;
+	padding: 20px;
+	text-decoration: none;
+	border: 2px solid #fff;
+	border-radius: 15px;
+	transition: transform 0.3s ease;
+ }
+ 
+ /* Стиль заголовку посилання */
+ .link-title {
+	display: block;
+	font-size: 1.5em;
+	color: #fff;
+	margin-bottom: 5px;
+ }
+ 
+ /* Стиль підпису посилання */
+ .link-subtitle {
+	display: block;
+	font-size: 0.9em;
+	color: #fff;
+	font-weight: 300;
+ }
+ 
+ /* Фонові градієнти для кожного посилання */
+ .link-rect {
+	background: linear-gradient(135deg, #040d0d, #0a1f1f);
+ }
+ 
+ .link-bez {
+	background: linear-gradient(135deg, #0a121f, #04050d);
+ }
+ 
+ /* Ефект збільшення при наведенні на посилання */
+ .link:hover {
+	transform: scale(1.05);
+ }
+ 
+ /* Зміна фону body при наведенні на посилання за допомогою псевдокласу :has */
+ body:has(.link-rect:hover) {
+	--myColor1: #040d0d;
+	--myColor2: #0a1f1f;
+	background: linear-gradient(135deg, var(--myColor1), var(--myColor2)); /* Базовий фон */
+ }
+ 
+ body:has(.link-bez:hover) {
+	--myColor2: #0a121f;
+	--myColor1: #04050d;
+	background: linear-gradient(135deg, var(--myColor1), var(--myColor2)); /* Базовий фон */
+ }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редактор кривої Безьє</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="controls">
+    <h1>Редактор кривої Безьє</h1>
+    <button onclick="clearCanvas()">Очистити канвас</button>
+    <button onclick="showControlPoints()">Показати всі точки P</button>
+    <div id="controlPointsList"></div>
+    
+    <div class="t-params">
+      <h3>Параметри t для обчислення точок кривої</h3>
+      <div class="t-inputs">
+        <div class="t-input">
+            <label>t_min:</label>
+            <input type="number" id="tMin" value="0" step="0.01">
+        </div>
+        <div class="t-input">
+            <label>t_max:</label>
+            <input type="number" id="tMax" value="1" step="0.01">
+        </div>
+        <div class="t-input">
+            <label>Крок:</label>
+            <input type="number" id="tStep" value="0.01" step="0.01">
+        </div>
+      </div>
+      <button onclick="drawYellowCurvePoints()">Відобразити точки на кривій</button>
+    </div>
+    <div id="curvePoints"></div>
+    
+    <div class="matrix-section">
+      <h3>Матриця коефіцієнтів</h3>
+      <div id="matrixBlock"></div>
+      <label>Введіть номер рядка:</label>
+      <input type="number" id="matrixRow" value="0" min="0">
+      <button onclick="displayMatrixRow()">Показати ненульові елементи</button>
+      <div id="matrixRowInfo"></div>
+    </div>
+  </div>
+  <canvas id="canvas"></canvas>
+  <script src="script.js"></script>
+  <script src="../add_back_button.js"></script>
+
+</body>
+</html>

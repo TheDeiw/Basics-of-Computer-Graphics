@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    text-align: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    background: linear-gradient(135deg, #040d0d, #0a1f1f);
+    color: white;
+	 
+}
+
+.controls {
+    width: 30%;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(20, 40, 40, 0.3); /* Напівпрозорий фон */
+    backdrop-filter: blur(10px); /* Ефект матового скла */
+    -webkit-backdrop-filter: blur(10px); /* Для Safari */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1, h3 {
+    margin-bottom: 10px;
+}
+
+input, button {
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input {
+    width: 100px;
+    background: rgba(50, 90, 90, 0.3);
+    color: white;
+    outline: none;
+    text-align: center;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+button {
+    background: rgba(50, 150, 150, 0.5);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+button:hover {
+    background: rgba(70, 180, 180, 0.7);
+}
+
+.dataBlock {
+    background-color: rgba(10, 30, 30, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dataBlock p {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dataBlock p:hover {
+    background-color: rgba(50, 120, 120, 0.4);
+}
+
+.active {
+    background-color: rgba(70, 180, 180, 0.6);
+    font-weight: bold;
+}
+
+.colorPicker {
+    margin-top: 15px;
+}
+
+canvas {
+    border: 2px solid rgb(156, 156, 156);
+    background: linear-gradient(135deg, #060f0f, #0d2626);
+    width: 65%;
+    height: 97vh;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+}
