@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Генератор фракталів</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="controls">
+    <h1>Генератор фракталів</h1>
+    <label for="fractalSelect">Виберіть фрактал:</label>
+    <select id="fractalSelect">
+      <option value="tg">tg(z²)+c</option>
+      <option value="koch">Сніжинка Коха (звичайна)</option>
+      <option value="kochRandom">Сніжинка Коха (рандомізована)</option>
+    </select>
+    
+    <div id="paramsPanel">
+      <!-- Параметри формуватимуться динамічно -->
+    </div>
+    
+    <button id="drawBtn">Побудувати</button>
+    <button id="clearBtn">Очистити</button>
+    <button id="saveBtn">Зберегти</button>
+    <button id="loadImgBtn">Завантажити зображення</button>
+    <input type="file" id="fileInput" accept="image/*" style="display:none;">
+  </div>
+  <canvas id="canvas"></canvas>
+  <script src="script.js"></script>
+  <script src="../add_back_button.js"></script>
+
+</body>
+</html>

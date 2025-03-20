@@ -82,6 +82,10 @@ h1 {
  .link-bez {
 	background: linear-gradient(135deg, #0a121f, #04050d);
  }
+
+ .link-frac {
+	background: linear-gradient(135deg, #1f0a0a, #0d0404);
+ }
  
  /* Ефект збільшення при наведенні на посилання */
  .link:hover {
@@ -98,5 +102,11 @@ h1 {
  body:has(.link-bez:hover) {
 	--myColor2: #0a121f;
 	--myColor1: #04050d;
+	background: linear-gradient(135deg, var(--myColor1), var(--myColor2)); /* Базовий фон */
+ }
+
+ body:has(.link-frac:hover) {
+	--myColor2: #1f0a0a;
+	--myColor1: #0d0404;
 	background: linear-gradient(135deg, var(--myColor1), var(--myColor2)); /* Базовий фон */
  }
