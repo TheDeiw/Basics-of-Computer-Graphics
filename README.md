@@ -1,13 +1,12 @@
 # Basics of Computer Graphics
 ### Overview
-
-
-### Reason for creation
 **[UA]**
 Проект створено як збірку лабораторних робіт для дисципліни "Комп'ютерна графіка". Він допомагає студентам зрозуміти принципи роботи з графічними об’єктами, координатними системами та їхньою візуалізацією через програмування.
 
 **[EN]**
 Created as collection a lab assignments for the "Computer Graphics" course, this project assists students in understanding the principles of working with graphical objects, coordinate systems, and their visualization through programming.
+
+![image](https://github.com/user-attachments/assets/817b0727-8fd6-4cfd-bd38-5e55931ffb4f)
 
 ## Decription of each lab
 ### Rectangles Painter
@@ -24,7 +23,13 @@ Tool for drawing rectangles on a coordinate plane, adding diagonals with a chose
 
 **[EN]**
 
+![image](https://github.com/user-attachments/assets/ae814946-ac87-4017-9884-bf3c96b1d4a6)
+
 ### Fractal Generator
 **[UA]**
 
 **[EN]**
+
+![image](https://github.com/user-attachments/assets/ddb614df-b8a4-4432-86a9-201a408e3a34)
+
+![image](https://github.com/user-attachments/assets/f7f1d510-6f8c-483b-b850-f87dc4732364)
