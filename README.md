@@ -16,7 +16,7 @@ Created as collection a lab assignments for the "Computer Graphics" course, this
 **[EN]**
 A tool for drawing rectangles on a coordinate plane, adding diagonals with a chosen color and random-colored triangles, and constructing circumscribed circles. It supports grid scaling, graph updates, and canvas clearing while preserving all drawn shapes. Built using HTML, CSS, and JavaScript with the canvas element for graphics.
 
-![screencapture-127-0-0-1-5500-index-html-2025-03-07-00_39_29](https://github.com/user-attachments/assets/e270828c-e462-4be2-8346-a153e780b2d9)
+![420115483-e270828c-e462-4be2-8346-a153e780b2d9](https://github.com/user-attachments/assets/a369777c-566b-4a0b-9d22-bd94a9fc8071)
 
 ### Bezier Curves
 **[UA]**
