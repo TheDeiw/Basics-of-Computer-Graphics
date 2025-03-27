@@ -11,13 +11,13 @@ const centerX = width / 2;
 const centerY = height / 2;
 
 // Обмеження зуму: мінімальний масштаб так, щоб по осі було не більше 200 поділок
-let scale = 1;
 const scaleFactor = 1.1;
 const step = 10;
 const minScale = centerX / 200;
 const maxScale = 300 / step;
+let scale = minScale;
 
-let points = [];       // контрольні точки
+let points = []; // контрольні точки
 let movingPoint = null;
 let isDragging = false;
 
@@ -80,7 +80,7 @@ function drawAxes() {
   context.save();
   context.translate(centerX, centerY);
   context.scale(scale, scale);
-  
+
   context.strokeStyle = "#0a1f1f";
   context.fillStyle = "#0a1f1f";
   context.lineWidth = 1 / scale;
@@ -159,7 +159,8 @@ function updatePolynomialCoefficients() {
   coefX = [];
   coefY = [];
   for (let p = 0; p <= n; p++) {
-    let sumX = 0, sumY = 0;
+    let sumX = 0,
+      sumY = 0;
     for (let i = 0; i <= n; i++) {
       sumX += coefficientMatrix[p][i] * points[i].x;
       sumY += coefficientMatrix[p][i] * points[i].y;
@@ -188,7 +189,8 @@ function updateMatrixDisplay() {
 function computeCurvePoint(t) {
   if (points.length === 0) return null;
   const n = points.length - 1;
-  let x = 0, y = 0;
+  let x = 0,
+    y = 0;
   for (let p = 0; p <= n; p++) {
     x += coefX[p] * Math.pow(t, p);
     y += coefY[p] * Math.pow(t, p);
@@ -219,7 +221,8 @@ function drawControlPoints() {
     let cy = toCanvasY(point.y);
     context.beginPath();
     context.arc(cx, cy, 5, 0, Math.PI * 2);
-    context.fillStyle = (index === 0 || index === points.length - 1) ? "green" : "red";
+    context.fillStyle =
+      index === 0 || index === points.length - 1 ? "green" : "red";
     context.fill();
     context.fillText(`P${index}`, cx + 10, cy - 10);
   });
@@ -272,12 +275,14 @@ function drawYellowCurvePoints() {
       context.beginPath();
       context.arc(pt.x, -pt.y, 3 / scale, 0, 2 * Math.PI);
       context.fill();
-      pointsList.push(`t=${t.toFixed(2)}: (${pt.x.toFixed(2)}, ${pt.y.toFixed(2)})`);
+      pointsList.push(
+        `t=${t.toFixed(2)}: (${pt.x.toFixed(2)}, ${pt.y.toFixed(2)})`
+      );
     }
   }
   context.restore();
   let html = "<ul>";
-  pointsList.forEach(item => {
+  pointsList.forEach((item) => {
     html += `<li>${item}</li>`;
   });
   html += "</ul>";
@@ -288,7 +293,8 @@ function drawYellowCurvePoints() {
 function displayMatrixRow() {
   const row = parseInt(document.getElementById("matrixRow").value);
   if (!coefficientMatrix || row < 0 || row >= coefficientMatrix.length) {
-    document.getElementById("matrixRowInfo").innerText = "Невірний номер рядка.";
+    document.getElementById("matrixRowInfo").innerText =
+      "Невірний номер рядка.";
     return;
   }
   let info = "";
@@ -297,18 +303,22 @@ function displayMatrixRow() {
       info += `Стовпець ${col}: ${val.toFixed(2)}; `;
     }
   });
-  document.getElementById("matrixRowInfo").innerText = info || "У рядку немає ненульових елементів.";
+  document.getElementById("matrixRowInfo").innerText =
+    info || "У рядку немає ненульових елементів.";
 }
 
 // --- Вивід контрольних точок P у текстовому вигляді ---
 function showControlPoints() {
   if (points.length === 0) {
-    document.getElementById("controlPointsList").innerHTML = "<p>Нема точок.</p>";
+    document.getElementById("controlPointsList").innerHTML =
+      "<p>Нема точок.</p>";
     return;
   }
   let html = "<ul>";
   points.forEach((point, index) => {
-    html += `<li>P${index}: (${point.x.toFixed(2)}, ${point.y.toFixed(2)})</li>`;
+    html += `<li>P${index}: (${point.x.toFixed(2)}, ${point.y.toFixed(
+      2
+    )})</li>`;
   });
   html += "</ul>";
   document.getElementById("controlPointsList").innerHTML = html;
