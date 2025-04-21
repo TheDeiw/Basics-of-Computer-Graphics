@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Js-canvas, drawing figures, curves, fractals. Labwork for 'Computer Graphics'">
+  <meta name="author" content="Chekhovskyi Dmytro (TheDeiw)">
+  <meta name="keywords" content="Computer Graphics, JS-Canvas">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Basics of Computer Graphics">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Js-canvas, drawing figures, curves, fractals. Labwork for 'Computer Graphics'">
+  <!-- <meta property="og:image" content="https://site.com/image.jpg"> -->
+  <meta property="og:url" content="https://thedeiw.github.io/Basics-of-Computer-Graphics/index.html">
+  <meta name="theme-color" content="#1e1e1e">
+
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+  <title>Рух фігури на площині</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="controls">
+    <h1>Рух квадрата на площині</h1>
+    
+    <!-- Введення координат чотирьох вершин квадрата -->
+     <fieldset>
+          <legend>Діагональні вершини квадрата</legend>
+           <div class="t-inputs">
+             <div class="t-input">
+               <label>Точка A (діагональ):</label>
+               <input type="number" id="x1" placeholder="x₁">
+               <input type="number" id="y1" placeholder="y₁">
+             </div>
+             <div class="t-input">
+                <label>Точка C (діагональ):</label>
+               <input type="number" id="x2" placeholder="x₂">
+               <input type="number" id="y2" placeholder="y₂">
+             </div>
+            </div>
+          </fieldset>
+  
+    <!-- Введення вектора переміщення та кута повороту -->
+    <fieldset class="t-params">
+      <legend>Параметри руху</legend>
+      <label>Вектор (N, M):</label>
+      <input type="number" id="dx" placeholder="N"> <input type="number" id="dy" placeholder="M">
+      <label>Кут α (градуси):</label>
+      <input type="number" id="angle" placeholder="α">
+    </fieldset>
+    
+    <!-- Зміна масштабу одиничного відрізку -->
+    <label>Одиничний відрізок (пікселі):</label>
+    <input type="number" id="unit" value="50">
+    
+    <!-- Повідомлення про помилки -->
+    <div id="messageArea"></div>
+    
+    <!-- Кнопки керування -->
+    <button id="startBtn">Почати</button>
+    <button id="resetBtn">Повернути до початкового</button>
+    <button id="saveMatrixBtn">Зберегти матрицю</button>
+    <button id="saveImageBtn">Зберегти зображення</button>
+  </div>
+  
+  <canvas id="canvas"></canvas>
+  <script src="script.js"></script>
+  <script src="../add_back_button.js"></script>
+</body>
+</html>
