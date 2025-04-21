@@ -6,7 +6,7 @@
 **[EN]**
 Created as collection a lab assignments for the "Computer Graphics" course, this project assists students in understanding the principles of working with graphical objects, coordinate systems, and their visualization through programming.
 
-![image](https://github.com/user-attachments/assets/817b0727-8fd6-4cfd-bd38-5e55931ffb4f)
+![image](https://github.com/user-attachments/assets/77a5cfbb-2d59-4e64-a734-1c4f8c403f15)
 
 ## Decription of each lab
 ### Rectangles Painter
@@ -37,3 +37,17 @@ A tool for constructing fractals. Two can be constructed: tg(z²)+c and Koch Sno
 ![image](https://github.com/user-attachments/assets/ddb614df-b8a4-4432-86a9-201a408e3a34)
 
 ![image](https://github.com/user-attachments/assets/f7f1d510-6f8c-483b-b850-f87dc4732364)
+
+### Color Converter
+**[UA]**
+
+**[EN]**
+
+![Screenshot 2025-04-21 224405](https://github.com/user-attachments/assets/b32c4aeb-ae0e-4a74-a702-839d8a4c80c5)
+
+### Affine transformation
+**[UA]**
+
+**[EN]**
+
+![Screenshot 2025-04-21 234417](https://github.com/user-attachments/assets/da3d43ff-f1e4-4bc8-a21a-5895cf4ed726)
