@@ -40,14 +40,18 @@ A tool for constructing fractals. Two can be constructed: tg(z²)+c and Koch Sno
 
 ### Color Converter
 **[UA]**
-
+Інструмент для роботи з кольорними моделями. Надає можливість змінити колірну модель завантаженого зображення на HSL або CMYK. Програма передбачає зміну яскравості для кольору Magenta.
+ 
 **[EN]**
+A tool for working with color models. Allows you to change the color model of the loaded image to HSL or CMYK. The program provides brightness changes for the Magenta color.
 
 ![Screenshot 2025-04-21 224405](https://github.com/user-attachments/assets/b32c4aeb-ae0e-4a74-a702-839d8a4c80c5)
 
 ### Affine transformation
 **[UA]**
+Інструмент для роботи з анімаціями через афінні перетворення. Програма дозволяє створити квадрат на координатній площині та занімувати його рух поверкотору з кутом повороту. Можлива маштабізація за допомогою колеса миші.
 
 **[EN]**
+A tool for working with animations through affine transformations. The program allows you to create a square on the coordinate plane and animate its rotation with a rotation angle. It is possible to scale using the mouse wheel.
 
 ![Screenshot 2025-04-21 234417](https://github.com/user-attachments/assets/da3d43ff-f1e4-4bc8-a21a-5895cf4ed726)
